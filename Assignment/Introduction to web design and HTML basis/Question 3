@@ -1,0 +1,17 @@
+<!--Describe the difference between block-level and inline elements in HTML.
+Ans :- Block level Elements
+
+The block level elements always starts with new line and the browsers automatically add some space before and after the element.The block level element always takes up the full width available, the example of blocked elements are 
+<p>Paragraph tag
+<div>Division tag
+<h1>to<h6> heading tag
+
+    Inline Elements
+
+    The inline elements does not starts with new line inline elements only takes up as much width as necessary, the example of inline elements are,
+
+    <img>
+    <b>
+    <span>
+
+-->

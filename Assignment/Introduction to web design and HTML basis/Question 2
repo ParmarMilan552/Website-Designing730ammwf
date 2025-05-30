@@ -1,0 +1,24 @@
+<!--List and explain at least five common HTML tags used in website design.
+Ans :- <h1>to<h6>
+        <p>
+        <img>
+        <div>
+        <span>
+
+        <h1>to<h6>
+            <h1> this element is used for provide heading in webpage also this is the largest heading element as well as also this is covering 100% area of web page this element is paired element.
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+                <h4></h4>
+                <h5></h5>
+                <h6></h6>
+
+        <p> This element is used for provide paragraph in web page <p> tag is also paired elememnt and covers 100% area.
+
+        <img>this element is provides images in web pages, <img> element is non block element means it cannot covering 100% area of web pages also img element is unpaired element.
+
+        <div> Using div element we can create different sections on web pages, div element is paired element as well as coveres 100% area of web page.
+
+        <span>Span tag is used to highlight some element or text, span element is paired tag.
+-->

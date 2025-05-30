@@ -1,0 +1,24 @@
+<!--Explain the structure of an HTML document and the purpose of DOCType.
+ANS :- Stucture of HTML Document
+
+<html>(html is the root element of html document with out html element document will not allowed to create)
+    <head>(head element is used for create heading information of webpage)
+        <title>(title element is used for provide web page title)
+        <meta>(meta element is used for webpage meta information)
+        <link>(link element is used for redirect one page to another)
+        <style>(style element is used for apply style in web page)
+        <script>(script tag is basically used for call java script we can call script in inside body as well as head tag)
+        <noscript>(noscript is only useful for some html tag is not support on old web browser)
+    </head>(here head tag is closed)
+    <body>(body element is also known as container tag all the web contents are displayed using body element)
+    </body>(here body tag is closed)
+</html>(closing html tag)
+
+THis is the simple html document stucture we can also say as skeleton and boiler plate stucture.
+
+Purpose of DOCType html
+<!DOCTYPE html>
+<!DOCTYPE html> declaration is to specify the version of HTML being used. This declaration is mandatory at the very beginning of an HTML document. 
+     This is help to suppose version of html and html5
+     
+-->
