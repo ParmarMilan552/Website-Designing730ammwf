@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+.navbar {
+  text-align: center;
+  margin-top: 50px;
+}
+.navbar a {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+  background-color: #2980b9;
+}

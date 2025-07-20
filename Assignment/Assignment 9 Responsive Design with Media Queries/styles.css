@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.box {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+/*  Two-column layout for screens wider than 768px */
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .content section:nth-child(3) {
+    grid-column: span 2;
+  }
+  .box {
+    font-size: 1.1rem;
+    padding: 30px;
+  }
+}
+/*  Even larger screens can have extra polish */
+@media (min-width: 1024px) {
+  .box {
+    font-size: 1.2rem;
+    padding: 40px;
+  }
+}

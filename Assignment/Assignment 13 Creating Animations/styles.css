@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  position: relative;
+  animation: moveColor 4s linear infinite;
+}
+@keyframes moveColor {
+  0% {
+    left: 0;
+    background-color: crimson;
+  }
+  50% {
+    left: calc(100vw - 100px);
+    background-color: royalblue;
+  }
+  100% {
+    left: 0;
+    background-color: crimson;
+  }
+}
