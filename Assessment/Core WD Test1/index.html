@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>navbar with logo and dropdown</title>
+  <link rel="stylesheet" href="navbar.css"/>
+</head>
+<body>
+  <!-- navigation container -->
+  <div class="navbar-container">
+    <!-- branding logo -->
+    <div class="logo-container">
+      <label class="logo-text">mylogo</label>
+    </div>
+    <!-- navigation links -->
+    <div class="nav-links">
+      <div class="nav-item">
+        <label><a href="#">home</a></label>
+      </div>
+      <div class="nav-item">
+        <label><a href="#">about</a></label>
+      </div>
+      <!-- dropdown item -->
+      <div class="nav-item dropdown">
+        <label><a href="#">services</a></label>
+        <div class="dropdown-menu">
+          <label><a href="#">web development</a></label>
+          <label><a href="#">graphic design</a></label>
+          <label><a href="#">seo</a></label>
+        </div>
+      </div>
+      <div class="nav-item">
+        <label><a href="#">contact</a></label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
