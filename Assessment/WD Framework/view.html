@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Submissions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h2>Submitted Visitor Data</h2>
+  <div id="dataContainer"></div>
+
+  <script>
+    const submissions = JSON.parse(localStorage.getItem("submissions") || "[]");
+    const container = document.getElementById("dataContainer");
+
+    if (submissions.length === 0) {
+      container.textContent = "No data available";
+    } else {
+      let table = "<table><tr><th>Full Name</th><th>Phone</th><th>Email</th><th>Aadhar</th><th>Check-in</th><th>Check-out</th></tr>";
+      submissions.forEach(sub => {
+        table += `<tr>
+          <td>${sub.fullName}</td>
+          <td>${sub.phone}</td>
+          <td>${sub.email}</td>
+          <td>${sub.aadhar}</td>
+          <td>${sub.checkin}</td>
+          <td>${sub.checkout}</td>
+        </tr>`;
+      });
+      table += "</table>";
+      container.innerHTML = table;
+    }
+  </script>
+</body>
+</html>
