@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Name" />
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Email" />
+    </div>
+    <div class="form-group">
+      <input type="text" id="mobile" placeholder="Mobile Number" />
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" placeholder="Password" />
+    </div>
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const mobileInput = document.getElementById('mobile');
+
+    // Restrict mobile input to digits only
+    mobileInput.addEventListener('keypress', function (e) {
+      const charCode = e.charCode || e.keyCode;
+      if (charCode < 48 || charCode > 57) {
+        e.preventDefault();
+      }
+    });
+
+    // Single function to validate required fields
+    function validateRequiredFields(fieldIds) {
+      // Remove previous error messages
+      document.querySelectorAll('.error-message').forEach(el => el.remove());
+
+      let isValid = true;
+
+      fieldIds.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+          const error = document.createElement('div');
+          error.className = 'error-message';
+          error.textContent = `${field.placeholder} is required`;
+          field.parentNode.appendChild(error);
+          isValid = false;
+        }
+      });
+
+      return isValid;
+    }
+
+    // Handle form submission
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const fields = ['name', 'email', 'mobile', 'password'];
+      if (validateRequiredFields(fields)) {
+        alert('Registration successful!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
