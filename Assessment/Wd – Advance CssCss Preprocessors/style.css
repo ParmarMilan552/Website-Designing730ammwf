@@ -1,0 +1,56 @@
+@import 'variables';
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: $color-background;
+}
+
+.header, .footer {
+    background-color: $color-header-footer;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; // Main content is twice as wide as sidebar
+    grid-template-rows: auto auto; // Two rows for the content sections
+    gap: 10px; // Space between grid items
+    padding: 10px;
+}
+
+.main-content {
+    background-color: $color-main-content;
+    grid-column: 1 / 2; // Spans the first column
+    grid-row: 1 / 2; // First row
+    padding: 40px;
+    color: white;
+}
+
+.sidebar {
+    background-color: $color-sidebar;
+    grid-column: 2 / 3; // Spans the second column
+    grid-row: 1 / 2; // First row
+    padding: 40px;
+    color: white;
+}
+
+.twin {
+    background-color: $color-twin;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+// Position the twin elements in the second row, spanning the respective columns
+.twin:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.twin:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
