@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery event handling mouse event</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Jquery Mouse Event handling</h1>
+    <hr>
+    <div id="div" style="background-color: yellow; width: 200px;height: 200px;margin: auto;margin-top: 5%;"></div>
+    <h1 id="msg" style="text-align: center;"></h1>
+    <script>
+        $(document).ready(function(){
+            $("#div").mouseenter(function(){
+                $(this).css("background-color","red")
+                $("#msg").text("Mouse Entered")
+            })
+            $("#div").mouseleave(function(){
+                $(this).css("background-color","yellow")
+                $("#msg").text("Mouse Leaved")
+            })
+            $("#div").click(function(){
+                $(this).css("background-color","blue")
+                $("#msg").text("Mouse Clicked")
+            })
+            $("#div").dblclick(function(){
+                $(this).css("background-color","brown")
+                $("#msg").text("Mouse Double clicked")
+            })
+        })
+    </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery Image Gallary</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script  type='text/javascript' src="jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+</head>
+<body>
+   <h1>Image gallary using Jquery</h1>
+   <img src="images/FB_IMG_15357089046277419.jpg" alt="error" id="gallary">
+   <br><br>
+   <button id="prev">Previous</button>
+   <button id="nxt">Next</button>
+   <script>
+    $(document).ready(function(){
+        var imgs=['D:\wd\Website-Designing730ammwf\Module 8 Jquery new\jquery\images\FB_IMG_15357089046277419'
+        ,
+        'D:\wd\Website-Designing730ammwf\Module 8 Jquery new\jquery\images\FB_IMG_15360413169611013'
+        ,
+        'D:\wd\Website-Designing730ammwf\Module 8 Jquery new\jquery\images\FB_IMG_15376794305358675'
+        ,
+        'D:\wd\Website-Designing730ammwf\Module 8 Jquery new\jquery\images\FB_IMG_15379904839476336'
+        ,
+        'D:\wd\Website-Designing730ammwf\Module 8 Jquery new\jquery\images\FB_IMG_15383808860190844']
+    })
+    var index=0
+    $("#nxt").click(function(){
+        index=index+1 % index.length
+        $("#gallary").fadeOut(500,function(){
+            $(this).attr("src".imgs[index].fadeIn(500))
+        })
+    })
+    $("#prev").click(function(){
+        index=(index+1 % index.length) %imgs.length
+        $("#gallary").fadeOut(500,function(){
+            $(this).attr("src".imgs[index].fadeIn(500))
+        })
+        
+    })
+   </script>
+</body>
+</html>

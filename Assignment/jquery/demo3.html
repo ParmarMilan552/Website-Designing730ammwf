@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery hide and show method</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facere veritatis quis, magnam architecto perferendis eveniet sed libero omnis voluptas ipsa sapiente! Est doloremque laborum voluptas, eius sed consectetur facere?</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#par").hide()
+            })
+            $("#show").click(function(){
+                $("#par").show()
+            })
+            $("#toggle").click(function(){
+                $("#par").toggle()
+            })
+        })
+    </script>
+</body>
+</html>

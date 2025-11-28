@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery form handling</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script  type='text/javascript' src="jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <input type="text" name="Enter your text" id="txt">
+    <select id="select">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JS</option>
+        <option>Jquery</option>
+    </select>
+    <button id="btn">Show</button>
+    <p id="msg"></p>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                txt=$("#txt").val()
+                select=$("#select").val()
+                $("#msg").html("Your Name is :"+txt+ "Your Course is :"+select)
+                $("#txt").val("")
+                $("#select").val("")
+            })
+        })
+    </script>
+</body>
+</html>

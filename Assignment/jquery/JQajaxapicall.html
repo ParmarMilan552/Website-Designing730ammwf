@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery AJAX call API</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- AJAX (asynchronized java script and xml) -->
+ <!-- API (application programming interface)
+  
+ json is collection of array and object
+
+
+ http request
+ =====================
+ 1.GET fetch data from api
+ 2.POST used for post data in api
+ 3.PUT used for update or modify data
+ 4. DELETE used for delete purpose
+
+ -->
+<table id="storedata" border="">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Price</th>
+            <tbody>
+                
+            </tbody>
+            <script>
+                $(document).ready(function(){
+                    $.ajax({
+                        url:"https://fakestoreapi.com/products/",
+                        type:"GET",
+                        success:function(products){
+                            for(var i of products){
+                                $("#storedata tbody").append(
+                                            `<tr>
+                                                <td>${i.id}</td>
+                                                <td>${i.title}</td>
+                                                <td><img src=${i.image} height=80px></td>
+                                                <td>${i.price}</td>
+                                            </tr>`
+                                            
+                                )
+                            }
+                        }
+                    })
+                })
+            </script>
+        </tr>
+    </thead>
+</table>    
+</body>
+</html>

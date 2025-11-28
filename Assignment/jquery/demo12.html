@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery traversing children() and parent() method</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div" style="border: solid black 2px;">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit commodi veniam perspiciatis explicabo <span>Milan Parmar</span>sed alias sequi quasi distinctio, soluta nesciunt, ipsam eligendi! Expedita, optio fugiat architecto vero cupiditate et dolores.
+        </p>
+    </div>
+    <button id="parent">Find Parent</button>
+    <button id="child">Find Child</button>
+    <script>
+        $(document).ready(function(){
+            $("#parent").click(function(){
+                $("span").parent().css("border","2px solid black")
+            })
+            $("#child").click(function(){
+                $("p").children().css("background-color","yellow")
+            })
+        })
+    </script>
+</body>
+</html>

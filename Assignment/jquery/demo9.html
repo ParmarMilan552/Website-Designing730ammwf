@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jquery event handling form event</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>DOM manipulation using JQUERY</h1>
+    <input type="text" placeholder="Enter your item" id="txt">
+    <button id="btn1">Add Item</button>
+    <button id="btn2">Remove list</button>
+    <button id="btn3">Empty list</button>
+    <ul id="list">
+        
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                let ni=$("#txt").val()
+                $("#list").append("<li>"+ni+"</li>")
+            })
+            $("#btn2").click(function(){
+                $("#list").remove()
+            })
+            $("#btn3").click(function(){
+                $("#list").empty()
+            })
+        })
+    </script>
+</body>
+</html>
