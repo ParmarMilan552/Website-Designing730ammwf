@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: monospace;
+}
+
+.clock-container {
+    text-align: center;
+}
+
+#date-display {
+    background-color: #b0e0e6; /* Light blue */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#time-display {
+    background-color: #000; /* Black background */
+    color: #39ff14; /* Neon green color, adjust as needed */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 3em;
+    border: 2px solid #ff00ff; /* Magenta border */
+}
